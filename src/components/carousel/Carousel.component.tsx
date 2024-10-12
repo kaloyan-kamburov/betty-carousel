@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useRef, useState, WheelEvent } from "react";
 import { CarouselProps } from "./Carousel.types";
 import CarouselSlide from "./CarouselSlide.component";
-import { useDebounce } from "./utils/useDebounce";
-import { calcProportionalHeight } from "./utils/hooks/calcProportionalHeight";
+import { useDebounce } from "./utils/hooks/useDebounce";
+import { calcProportionalHeight } from "./utils/calcProportionalHeight";
 import "./Carousel.styles.css";
 
 const Carousel: FC<CarouselProps> = ({

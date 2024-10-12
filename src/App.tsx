@@ -30,7 +30,7 @@ function App() {
         ]}
       />
       <p className="text-center">
-        <a href="https://github.com/kaloyan-kamburov/betty-task" target="_blank">
+        <a href="https://github.com/kaloyan-kamburov/betty-carousel" target="_blank">
           GitHub source
         </a>
       </p>
