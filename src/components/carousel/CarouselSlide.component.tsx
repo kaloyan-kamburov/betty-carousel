@@ -7,7 +7,6 @@ const CarouselSlide: FC<CarouselSlideProps> = ({
   currentPage = 0,
   onImgLoaded,
   cachedImages,
-  loadExplicit = false,
   width,
 }) => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -49,13 +48,11 @@ const CarouselSlide: FC<CarouselSlideProps> = ({
       {loading && <div className="loader" data-testid="loader" />}
 
       {!errorOccured ? (
-        (page === currentPage - 1 || loadExplicit || cachedImages[page]) &&
+        (page === currentPage - 1 || cachedImages[page]) &&
         imgRendered && (
           <img
             className={`${loading && !cachedImages[page] ? "loading" : ""}`}
-            src={
-              page === currentPage - 1 || loadExplicit || cachedImages[page] ? imgUrl : ""
-            }
+            src={page === currentPage - 1 || cachedImages[page] ? imgUrl : ""}
             onLoadStart={onLoadingStart}
             onLoad={onLoad}
             onError={onError}

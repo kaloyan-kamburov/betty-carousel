@@ -13,7 +13,6 @@ describe("CarouselSlide", () => {
       currentPage: 0,
       onImgLoaded: vitest.fn(),
       cachedImages: {},
-      loadExplicit: false,
       width: 100,
     };
 
@@ -32,7 +31,6 @@ describe("CarouselSlide", () => {
       cachedImages: {
         0: true,
       },
-      loadExplicit: false,
       width: 100,
     };
 

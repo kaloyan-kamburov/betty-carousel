@@ -177,7 +177,6 @@ const Carousel: FC<CarouselProps> = ({
               currentPage={currentPage}
               onImgLoaded={onImgLoaded}
               cachedImages={cachedImages}
-              // loadExplicit
               width={carouselWidth}
             />
 
@@ -189,7 +188,6 @@ const Carousel: FC<CarouselProps> = ({
                 currentPage={currentPage}
                 onImgLoaded={onImgLoaded}
                 cachedImages={cachedImages}
-                // loadExplicit={index === imgUrls.length - 1}
                 width={carouselWidth}
               />
             ))}
@@ -199,7 +197,6 @@ const Carousel: FC<CarouselProps> = ({
               page={0}
               onImgLoaded={onImgLoaded}
               cachedImages={cachedImages}
-              loadExplicit
               width={carouselWidth}
             />
           </div>
