@@ -116,6 +116,7 @@ const Carousel: FC<CarouselProps> = ({
   };
 
   useEffect(() => {
+    let timeout: NodeJS.Timeout | undefined;
     if (!transitionInProgress) {
       //if on last page
       if (currentPage === imgUrls.length + 1) {
@@ -127,9 +128,14 @@ const Carousel: FC<CarouselProps> = ({
         setCurrentPage(imgUrls.length);
       }
       //return to default transition
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setTransition(defaultTransition);
       }, 50);
+      return () => {
+        if (timeout) {
+          clearTimeout(timeout);
+        }
+      };
     }
   }, [transitionInProgress]);
 
